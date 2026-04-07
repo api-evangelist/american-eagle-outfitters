@@ -1,7 +1,12 @@
 aid: american-eagle-outfitters
-url: https://raw.githubusercontent.com/api-evangelist/american-eagle-outfitters/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/american-eagle-outfitters/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.american-eagle-outfitters.com
+description: >-
+  American Eagle Outfitters is a global specialty retailer offering high-quality,
+  on-trend clothing, accessories, and personal care products at affordable prices
+  under the American Eagle and Aerie brands.
