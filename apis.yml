@@ -17,6 +17,8 @@ tags:
   - Consumer Goods
 apis: []
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/american-eagle-outfitters
   - type: Website
     url: https://www.ae.com
   - type: Portal
