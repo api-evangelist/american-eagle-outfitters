@@ -18,6 +18,8 @@ tags:
   - Fortune 1000
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/american-eagle-outfitters-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/american-eagle-outfitters
   - type: Website

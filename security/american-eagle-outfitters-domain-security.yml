@@ -1,0 +1,33 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.ae.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 26 23:59:59 2027 GMT
+  hsts: null
+- host: www.americaneagle.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 20 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: ae.com
+  dnssec: false
+  caa:
+  - 0 issue "comodoca.com"
+  - 0 issue "letsencrypt.org"
+  - 0 issue "pki.goog"
+  - 0 issue "amazonaws.com"
+  - 0 issue "sectigo.com"
+  - 0 iodef "mailto:url@ae.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: americaneagle.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
