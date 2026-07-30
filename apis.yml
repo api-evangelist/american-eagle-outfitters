@@ -1,4 +1,16 @@
 aid: american-eagle-outfitters
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-eagle-outfitters.png
 name: American Eagle Outfitters
 url: https://raw.githubusercontent.com/api-evangelist/american-eagle-outfitters/refs/heads/main/apis.yml
 modified: '2026-04-19'
