@@ -1,0 +1,37 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.unsubscribed.com/agents.md
+limit_count: 0
+note: >-
+  A rate-limit policy is stated in prose but no number is published anywhere. The
+  Unsubscribed agents.md tells agents the MCP endpoint is rate-limited per IP and to back
+  off on 429, which is a genuine runtime signal, but it names no ceiling, no window, no
+  burst and no response header. limit_count is therefore an honest 0: the policy exists,
+  the quantity does not. American Eagle's flagship hosts (www.ae.com, www.aerie.com) publish
+  no limits at all and sit behind an Akamai edge that returns 403 Access Denied to
+  non-browser clients.
+limits: []
+policies:
+- scope: per-ip
+  surface: https://www.unsubscribed.com/api/ucp/mcp
+  window: unspecified
+  limit: unspecified
+  burst: unspecified
+  status_on_exhaustion: 429
+  retry_after_header: undocumented
+  documented_text: 'Respect rate limits. The MCP endpoint is rate-limited per IP. Back off on 429 responses.'
+  source: https://www.unsubscribed.com/agents.md
+response_headers:
+  observed: []
+  detail: >-
+    No X-RateLimit-*, RateLimit-* or Retry-After header was present on the anonymous
+    tools/list 200 or on the 422 error response observed 2026-09-02. An agent has no way to
+    read remaining quota before it is cut off.
+edge_controls:
+- host: www.ae.com
+  control: Akamai bot manager
+  observed: 403 Access Denied to default clients; 200 to a browser User-Agent with a full header set.
+  detail: This is an edge access policy rather than a published rate limit, but it is the binding constraint on any agent reading ae.com.
+- host: www.toddsnyder.com
+  control: Cloudflare managed challenge
+  observed: 403 "Just a moment..." interactive challenge on /.well-known/* and /api/ucp/mcp; /llms.txt served 200.

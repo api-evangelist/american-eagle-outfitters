@@ -1,0 +1,28 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.ae.com/llms.txt, https://www.aeo-inc.com/, https://www.unsubscribed.com/agents.md
+plan_count: 0
+note: >-
+  American Eagle Outfitters sells clothing, not API access. There is no developer plan, no
+  API pricing page, no metered tier and no "contact sales" API gate — the company has no
+  developer programme at all. The one callable surface in the estate (the UCP/MCP shopping
+  endpoint on the Unsubscribed storefront) is free to call and carries no commercial terms
+  of its own; its cost model is the retail price of the goods an agent puts in the cart.
+  Recorded as an explicit zero rather than omitted, so the absence is legible as a
+  measurement instead of a gap in our coverage.
+plans: []
+evidence:
+- url: https://www.ae.com/llms.txt
+  status: 200
+  detail: AEO's own machine-readable directory lists 43 links — storefronts, size charts, gift cards, a credit card page and a return policy. Nothing developer-facing.
+- url: https://www.unsubscribed.com/agents.md
+  status: 200
+  detail: Publishes the agent integration instructions in full and names no fee, quota or plan.
+- url: https://developer.ae.com/
+  status: NXDOMAIN
+- url: https://developers.ae.com/
+  status: NXDOMAIN
+consumer_commerce_note: >-
+  AEO does publish consumer commercial pages (Real Rewards credit card, gift cards, Aerie
+  refer-a-friend), all named in its llms.txt. Those are retail offers, not API plans, and
+  are deliberately not recorded as plans here.

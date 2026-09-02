@@ -1,0 +1,83 @@
+generated: '2026-09-02'
+method: searched
+source: https://github.com/aeo (GitHub org API), npm, PyPI, RubyGems, crates.io, NuGet, Maven Central, pkg.go.dev
+package_count: 0
+official_sdk_count: 0
+note: >-
+  American Eagle Outfitters ships no client libraries. Its GitHub organisation
+  (github.com/aeo — verified as AEO: name "American Eagle Outfitters", location
+  "Pittsburgh, PA", blog www.ae.com) holds 10 public repositories, all front-end tooling and
+  editor bundles, six of them forks, and the newest first-party work last touched in 2017.
+  There is no SDK to be out of date, because there is no API to wrap. Recorded as an
+  explicit zero, and NO `SDKs` pointer is emitted — the artifact documents an absence and
+  must not be scored as a presence.
+packages: []
+github_org:
+  url: https://github.com/aeo
+  status: 200
+  name: American Eagle Outfitters
+  location: Pittsburgh, PA
+  public_repos: 10
+  created: '2012'
+  repositories:
+  - name: style-guide
+    description: The AEO Front-end Dev Style Guide
+    fork: false
+    last_updated: '2017-06-16'
+  - name: svn-log-parser
+    description: Parses SVN logs into relevant JSON.
+    language: JavaScript
+    fork: false
+    last_updated: '2026-08-12'
+    note: Metadata touch only; no release, no registry publication.
+  - name: alice
+    description: jQuery plugin for monitoring and reacting to vertical scroll position
+    language: JavaScript
+    fork: false
+    last_updated: '2017-06-16'
+  - name: library
+    description: Read, digest, learn
+    language: JavaScript
+    fork: false
+    last_updated: '2015-06-15'
+  - name: jstl-tmbundle
+    fork: true
+    last_updated: '2013-01-09'
+  - name: kalei
+    fork: true
+    last_updated: '2013-01-10'
+  - name: atg-tmbundle
+    fork: true
+    last_updated: '2013-03-27'
+  - name: idiomatic.js
+    fork: true
+    last_updated: '2014-05-14'
+  - name: css-brush-up
+    fork: true
+    last_updated: '2015-06-10'
+  - name: website
+    description: Source for emberjs.com
+    fork: true
+    last_updated: '2017-03-06'
+  detail: >-
+    No .proto, no OpenAPI, no AsyncAPI and no published package in any repository. The org
+    is a dormant 2013-2017 front-end shop, not an API estate.
+registries_searched:
+- registry: npm
+  result: no first-party American Eagle Outfitters package
+- registry: PyPI
+  result: no first-party package
+- registry: RubyGems
+  result: no first-party package
+- registry: Maven Central
+  result: no first-party package
+- registry: NuGet
+  result: no first-party package
+- registry: crates.io
+  result: no first-party package
+- registry: pkg.go.dev
+  result: no first-party package
+third_party_note: >-
+  Agents transacting with the Unsubscribed storefront are directed by the provider to
+  Shopify's Shop skill (https://shop.app/SKILL.md), which is a Shopify distribution, not an
+  AEO package, and is not recorded as an AEO SDK.

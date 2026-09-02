@@ -1,0 +1,101 @@
+generated: '2026-09-02'
+method: probed
+source: live HTTPS probes of the named /.well-known/ paths on every American Eagle Outfitters brand host
+note: >-
+  Probed 2026-09-02 with a browser User-Agent. American Eagle Outfitters serves NO
+  /.well-known/ documents from its flagship hosts (www.ae.com, www.aerie.com) — every named
+  path returns 404 or an Akamai 403 there. Real documents were found only on
+  www.unsubscribed.com, the AEO brand storefront running on Shopify: a UCP merchant
+  profile, an OpenID Connect discovery document and an OAuth protected-resource document.
+  Those three are Shopify-platform-provided surfaces served from an AEO-controlled
+  hostname, not documents AEO authored; they are recorded as served because that is what
+  an agent hitting the host actually gets. www.toddsnyder.com (also an AEO brand on
+  Shopify, behind Cloudflare) answered a managed-challenge 403 on every /.well-known/
+  path, so its posture is unknown rather than absent. No security.txt, no api-catalog,
+  no ai-plugin.json and no A2A agent card anywhere in the estate.
+hosts:
+- host: www.ae.com
+  note: Akamai edge. Serves /llms.txt and /robots.txt to a browser UA; all /.well-known/ paths 404.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/ucp
+    status: 404
+- host: www.aerie.com
+  note: Same Akamai edge as www.ae.com; answered 403 Access Denied to every request, including robots.txt and llms.txt. Posture unknown, not confirmed absent.
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/ucp
+    status: 403
+- host: www.aeo-inc.com
+  note: Corporate site on WordPress VIP. Every named path 404s to the WordPress 404 template.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.unsubscribed.com
+  note: >-
+    AEO brand storefront on Shopify. Ownership confirmed from the store's own terms of
+    service ("© 2021 AEO MANAGEMENT CO.") and its DMCA agent block ("American Eagle
+    Outfitters, Inc., 77 Hot Metal Street, Pittsburgh, Pennsylvania 15203,
+    copyrightalert@ae.com"), and from AEO's corporate site listing Unsubscribed as one of
+    its five brands. The three served documents are Shopify platform features, not
+    AEO-authored files.
+  documents:
+  - path: /.well-known/ucp
+    status: 200
+    file: american-eagle-outfitters-unsubscribed-ucp.json
+  - path: /.well-known/ucp.json
+    status: 200
+    file: american-eagle-outfitters-unsubscribed-ucp-json.json
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: american-eagle-outfitters-unsubscribed-openid-configuration.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: american-eagle-outfitters-unsubscribed-oauth-protected-resource.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.toddsnyder.com
+  note: AEO brand storefront on Shopify behind a Cloudflare managed challenge. /llms.txt was served (200) but every /.well-known/ path returned the interactive-challenge 403, so absence cannot be asserted.
+  documents:
+  - path: /.well-known/ucp
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 403

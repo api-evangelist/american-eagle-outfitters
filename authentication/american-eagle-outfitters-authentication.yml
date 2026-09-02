@@ -1,0 +1,64 @@
+generated: '2026-09-02'
+method: probed
+source: https://www.unsubscribed.com/.well-known/openid-configuration
+docs: https://www.unsubscribed.com/agents.md
+summary: >-
+  American Eagle Outfitters publishes no developer authentication surface — there is no API
+  key programme, no developer portal and no documented auth page on www.ae.com or
+  www.aeo-inc.com. The only machine-readable auth metadata in the estate is served by
+  Shopify on the AEO brand storefront www.unsubscribed.com: a full OpenID Connect discovery
+  document and an RFC 9728 OAuth protected-resource document for customer accounts. The
+  UCP/MCP commerce endpoint itself takes no credential on discovery.
+schemes:
+- id: ucp_agent_profile
+  type: agent-identity
+  applies_to: https://www.unsubscribed.com/api/ucp/mcp
+  location: JSON-RPC params.meta["ucp-agent"].profile
+  required_for:
+  - tools/call
+  - prompts/list
+  - resources/list
+  not_required_for:
+  - initialize
+  - tools/list
+  description: >-
+    The UCP shopping server identifies the calling agent by a profile URI rather than a
+    bearer token. Discovery is anonymous; any invocation without a profile URI returns
+    JSON-RPC error -32001 with data.code invalid_profile_url.
+  evidence: 'Observed 2026-09-02: tools/list returned 200 with 13 tools; tools/call returned HTTP 422 / -32001 invalid_profile_url.'
+- id: shopify_customer_oidc
+  type: openIdConnect
+  applies_to: https://www.unsubscribed.com
+  openid_configuration: https://www.unsubscribed.com/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/55041261720
+  authorization_endpoint: https://account.unsubscribed.com/authentication/oauth/authorize
+  token_endpoint: https://account.unsubscribed.com/authentication/oauth/token
+  jwks_uri: https://account.unsubscribed.com/authentication/.well-known/jwks.json
+  end_session_endpoint: https://account.unsubscribed.com/authentication/logout
+  response_types_supported:
+  - code
+  token_endpoint_auth_methods_supported:
+  - client_secret_basic
+  - client_secret_post
+  id_token_signing_alg_values_supported:
+  - RS256
+  subject_types_supported:
+  - public
+  description: >-
+    Shopify customer-account OIDC for the Unsubscribed storefront. This authenticates a
+    shopper, not a developer integration.
+- id: shopify_protected_resource
+  type: oauth2
+  spec: RFC 9728 OAuth 2.0 Protected Resource Metadata
+  applies_to: https://www.unsubscribed.com
+  document: https://www.unsubscribed.com/.well-known/oauth-protected-resource
+  authorization_servers:
+  - https://account.unsubscribed.com
+  - https://shopify.com/authentication/55041261720
+  bearer_methods_supported:
+  - header
+hosts_with_no_auth_surface:
+- host: www.ae.com
+  note: /.well-known/openid-configuration and /.well-known/oauth-authorization-server both 404. No developer sign-up, no API key page.
+- host: www.aeo-inc.com
+  note: WordPress VIP corporate site. /wp-json/ advertises application-passwords for wp-admin only; all agent-facing routes (wp-abilities/v1) return 401 rest_forbidden anonymously.

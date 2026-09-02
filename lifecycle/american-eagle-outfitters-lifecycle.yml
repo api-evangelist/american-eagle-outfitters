@@ -1,0 +1,50 @@
+generated: '2026-09-02'
+method: probed
+source: https://www.unsubscribed.com/.well-known/ucp.json and https://www.unsubscribed.com/api/ucp/mcp (initialize), probed 2026-09-02
+summary: >-
+  American Eagle Outfitters publishes no API versioning policy, no deprecation policy, no
+  SLA and no status page — there is no developer programme for any of those to attach to.
+  The only lifecycle signal in the estate is version negotiation on the Shopify-provided
+  UCP/MCP surface, which is real and dated.
+versioning:
+  documented: true
+  operator: platform
+  scheme: dated protocol versions (YYYY-MM-DD)
+  current: '2026-08-25'
+  supported:
+  - version: '2026-08-25'
+    profile: https://unsubscribed-com.myshopify.com/.well-known/ucp/2026-08-25
+    status: current
+  - version: '2026-04-08'
+    profile: https://unsubscribed-com.myshopify.com/.well-known/ucp/2026-04-08
+    status: supported
+  - version: '2026-01-23'
+    profile: https://unsubscribed-com.myshopify.com/.well-known/ucp/2026-01-23
+    status: supported
+  negotiation: >-
+    An agent reads supported_versions from /.well-known/ucp.json, or receives
+    protocolVersion 2024-11-05 from the MCP initialize handshake. Three concurrent UCP
+    versions are live, which is a real backwards-compatibility posture even though no
+    written policy accompanies it.
+mcp_protocol_version: '2024-11-05'
+deprecation_policy:
+  documented: false
+  sunset_header: unknown
+  detail: >-
+    No deprecation policy, no RFC 8594 Sunset/Deprecation header documentation, and no
+    stated end-of-life date for the two older UCP versions. Their continued presence in
+    supported_versions is the only signal, and it carries no commitment.
+status_page:
+  published: false
+  probed:
+  - url: https://status.ae.com/
+    status: NXDOMAIN
+  - url: https://www.ae.com/.well-known/api-catalog
+    status: 404
+  detail: No AEO-operated status page found. The underlying storefront runs on Shopify, whose status page is a vendor surface and is not claimed here on AEO's behalf.
+sla:
+  published: false
+changelog:
+  published: false
+  detail: No dated API or developer changelog exists. www.aeo-inc.com/news-media/ is a corporate newsroom, not a release log, and is pointed at as Blog rather than ChangeLog.
+deprecated_operations: []

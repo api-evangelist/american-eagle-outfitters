@@ -1,0 +1,122 @@
+generated: '2026-09-02'
+method: derived
+source: >-
+  mcp/american-eagle-outfitters-unsubscribed-mcp-tools.json (13 tool schemas fetched
+  2026-09-02), https://www.unsubscribed.com/agents.md, and observed responses from
+  https://www.unsubscribed.com/api/ucp/mcp
+scope: >-
+  These conventions describe the ONE callable surface American Eagle Outfitters exposes to
+  agents: the UCP/MCP shopping endpoint on the Unsubscribed brand storefront. AEO publishes
+  no REST API, no developer docs and no conventions of its own; everything below is read
+  from the live tool schemas and the store's published agents.md.
+auth_style:
+  model: agent-profile-uri
+  detail: params.meta["ucp-agent"].profile is required on every tool call. Discovery (initialize, tools/list) is anonymous.
+  see: authentication/american-eagle-outfitters-authentication.yml
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency key exists anywhere in the surface. None of the 13 tool inputSchemas
+    accepts an Idempotency-Key, request_id or client_token field; the only required
+    envelope field is `meta`, whose schema contains exactly one property (ucp-agent.profile).
+    A repeated complete_checkout is not deduplicated by any published mechanism. Recorded
+    as a real gap, not as unknown.
+  evidence: 'create_checkout inputSchema required: [meta, checkout]; meta properties: [ucp-agent] only.'
+pagination:
+  style: unknown
+  detail: search_catalog and lookup_catalog take a `catalog` object; no cursor/limit/offset field is documented in the published tool description, and the response shape could not be observed because tools/call is gated on an agent profile.
+money_representation:
+  format: integer minor units + ISO 4217 currency code
+  example: '{"amount": 600, "currency": "USD"} is $6.00'
+  detail: >-
+    Stated identically in all 13 tool descriptions. Agents must divide by 100 for
+    two-decimal currencies and treat zero-decimal currencies (JPY) as whole units before
+    quoting a price to a buyer. This is the single most load-bearing convention on the
+    surface and it is published in-band, in every schema.
+  source: mcp/american-eagle-outfitters-unsubscribed-mcp-tools.json
+buyer_context:
+  fields:
+  - context.address_country
+  - context.currency
+  detail: agents.md instructs agents to pass buyer context for accurate pricing and availability.
+  source: https://www.unsubscribed.com/agents.md
+error_envelope:
+  style: JSON-RPC 2.0 error object
+  shape: '{jsonrpc, id, error:{code, message, data:{code, content, continue_url}}}'
+  observed_example: '{"code":-32001,"message":"UCP discovery failed","data":{"code":"invalid_profile_url","content":"Unable to fetch agent profile: Missing profile uri","continue_url":"https://unsubscribed-com.myshopify.com/"}}'
+  http_status_on_error: 422
+  see: errors/american-eagle-outfitters-problem-types.yml
+versioning:
+  style: dated protocol versions
+  current: '2026-08-25'
+  also_supported:
+  - '2026-04-08'
+  - '2026-01-23'
+  negotiated_via: /.well-known/ucp.json supported_versions, and MCP initialize protocolVersion
+  see: lifecycle/american-eagle-outfitters-lifecycle.yml
+rate_limit_signaling:
+  documented: true
+  numeric_limits_published: false
+  detail: agents.md states "The MCP endpoint is rate-limited per IP. Back off on 429 responses." No headers, window or ceiling are published.
+  see: rate-limits/american-eagle-outfitters-rate-limits.yml
+dry_run_mode:
+  supported: false
+  detail: >-
+    No test mode, sandbox store or simulation flag is published. create_cart and
+    create_checkout against the live store are the only rehearsal available, and both
+    create real state. There is no way for an agent to rehearse a purchase.
+human_approval:
+  required_for:
+  - complete_checkout
+  detail: >-
+    Both robots.txt and agents.md state the invariant explicitly: "Checkouts are for humans.
+    Do NOT complete checkout, payment, or order placement automatically — no scripted form
+    fills, browser automation, or end-to-end agent flows that finalize payment without an
+    explicit, contemporaneous human approval step."
+  source: https://www.unsubscribed.com/robots.txt
+reversibility:
+  grade: documented
+  applies_to: https://www.unsubscribed.com/api/ucp/mcp
+  summary: >-
+    The write surface has real, first-class reversal operations — cancel_cart and
+    cancel_checkout are published tools with fetched schemas — but the provider states NO
+    window for either, and there is no reversal operation at all for a completed order.
+    Graded `documented` rather than `verified` for exactly that reason: an agent can find
+    the undo, but cannot learn from the contract how long it has to use it.
+  write_surfaces:
+  - operation: create_cart
+    reversal: cancel_cart
+    window_stated: false
+    note: cancel_cart is a published MCP tool taking {meta, id}. No expiry or deadline is stated in the tool description or in agents.md.
+  - operation: create_checkout
+    reversal: cancel_checkout
+    window_stated: false
+    note: cancel_checkout is a published MCP tool taking {meta, id}. The docs do not say whether it works after payment authorization or only before.
+  - operation: update_cart
+    reversal: update_cart
+    window_stated: false
+    note: Mutations are re-appliable while the cart is open; no explicit rollback is offered.
+  - operation: update_checkout
+    reversal: update_checkout
+    window_stated: false
+  - operation: complete_checkout
+    reversal: null
+    window_stated: false
+    note: >-
+      NO API-LEVEL REVERSAL. There is no refund, void or cancel_order tool in the 13-tool
+      set — get_order is read-only. Once complete_checkout succeeds the only path back is
+      American Eagle's human returns process, which is a shopper workflow and not reachable
+      from this contract. This is the one irreversible action on the surface, which is
+      consistent with the provider requiring contemporaneous human approval before it.
+  human_fallback:
+    policy_url: https://www.ae.com/us/en/content/help/return-policy
+    note: >-
+      Named in AEO's own llms.txt as the return, refund and exchange policy. Not probed for
+      a stated day-count and NOT recorded as an API window — no window is asserted here that
+      the provider did not state in a machine-readable place.
+cross_links:
+  errors: errors/american-eagle-outfitters-problem-types.yml
+  lifecycle: lifecycle/american-eagle-outfitters-lifecycle.yml
+  authentication: authentication/american-eagle-outfitters-authentication.yml
+  rate_limits: rate-limits/american-eagle-outfitters-rate-limits.yml
+  mcp: mcp/american-eagle-outfitters-mcp.yml

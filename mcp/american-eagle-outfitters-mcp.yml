@@ -1,0 +1,100 @@
+generated: '2026-09-02'
+method: probed
+source: https://www.unsubscribed.com/api/ucp/mcp
+name: Unsubscribed Commerce (UCP/MCP)
+description: >-
+  American Eagle Outfitters exposes one live, anonymously reachable MCP endpoint across its
+  estate: the Universal Commerce Protocol (UCP) shopping server on www.unsubscribed.com, the
+  AEO brand storefront running on Shopify. It answers `initialize` and `tools/list` without
+  credentials and returns 13 real tools with full JSON Schema inputs covering catalog search,
+  cart, checkout and order lookup. It is a Shopify platform capability served from an
+  AEO-controlled hostname, not a server AEO wrote — but it is the surface an agent actually
+  reaches when it shops an AEO brand, so it is recorded as present.
+ownership:
+  host_controlled_by: American Eagle Outfitters, Inc.
+  evidence: >-
+    unsubscribed.com terms of service carry "© 2021 AEO MANAGEMENT CO. ALL RIGHTS RESERVED"
+    and name "American Eagle Outfitters, Inc., 77 Hot Metal Street, Pittsburgh, Pennsylvania
+    15203, copyrightalert@ae.com" as the DMCA agent; www.aeo-inc.com lists Unsubscribed as
+    one of AEO's five brands and links to www.unsubscribed.com.
+  authored_by: Shopify (platform-provided UCP implementation)
+deployment:
+  mode: remote
+  endpoint: https://www.unsubscribed.com/api/ucp/mcp
+  auth: none
+  verified: probed
+  note: >-
+    Discovery (initialize, tools/list) is fully anonymous. tools/call, prompts/list and
+    resources/list are gated on a UCP agent profile — they return JSON-RPC error -32001
+    "UCP discovery failed" / invalid_profile_url until the caller supplies
+    meta["ucp-agent"].profile. There is no API key and no OAuth on the discovery path.
+server_info:
+  name: universal-commerce
+  version: 0.1.0
+  protocol_version: '2024-11-05'
+  capabilities:
+    tools:
+      listChanged: true
+    prompts:
+      listChanged: true
+    resources:
+      listChanged: true
+    logging: {}
+discovery:
+  ucp_profile: https://www.unsubscribed.com/.well-known/ucp
+  agent_instructions: https://www.unsubscribed.com/agents.md
+  canonical_shopify_endpoint: https://unsubscribed-com.myshopify.com/api/ucp/mcp
+  ucp_versions_supported:
+  - '2026-08-25'
+  - '2026-04-08'
+  - '2026-01-23'
+tools_schema_file: american-eagle-outfitters-unsubscribed-mcp-tools.json
+tool_count: 13
+tools:
+- name: search_catalog
+  category: catalog
+  description: Search for products from the online store, hosted on Shopify.
+- name: lookup_catalog
+  category: catalog
+  description: Look up multiple products or variants by identifier.
+- name: get_product
+  category: catalog
+  description: Retrieve complete product detail by identifier.
+- name: create_cart
+  category: cart
+  description: Creates a new cart.
+- name: get_cart
+  category: cart
+  description: Get the cart contents.
+- name: update_cart
+  category: cart
+  description: Perform updates to a cart.
+- name: cancel_cart
+  category: cart
+  description: Cancels a cart.
+- name: create_checkout
+  category: checkout
+  description: Creates a checkout; returns line items, totals, discounts and taxes.
+- name: get_checkout
+  category: checkout
+  description: Returns details about the checkout, including line items and totals.
+- name: update_checkout
+  category: checkout
+  description: Updates a checkout (shipping address, method).
+- name: complete_checkout
+  category: checkout
+  description: Completes a checkout; returns order ID and Thank You Page URL. Requires explicit buyer approval.
+- name: cancel_checkout
+  category: checkout
+  description: Cancels a checkout.
+- name: get_order
+  category: order
+  description: Get the details of an order.
+other_hosts_probed:
+- host: www.toddsnyder.com
+  endpoint: https://www.toddsnyder.com/api/ucp/mcp
+  status: 403
+  note: Cloudflare managed challenge; the store's /llms.txt was served but the MCP endpoint could not be reached. Presence unknown.
+- host: www.ae.com
+  status: 404
+  note: /.well-known/ucp 404s; no MCP endpoint found on the flagship American Eagle / Aerie host.

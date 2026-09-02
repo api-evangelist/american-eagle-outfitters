@@ -1,0 +1,42 @@
+generated: '2026-09-02'
+method: probed
+source: observed responses from https://www.unsubscribed.com/api/ucp/mcp and https://www.aeo-inc.com/wp-json/, 2026-09-02
+format: json-rpc-2.0
+note: >-
+  American Eagle Outfitters publishes no error reference. There is no OpenAPI to derive
+  4xx/5xx responses from and no documented error catalog on any AEO host. Every entry below
+  was observed live on 2026-09-02 by making the call and recording exactly what came back —
+  nothing here is inferred from a schema or a docs page, and the catalog is deliberately
+  short because only these were actually reproduced.
+envelope:
+  style: JSON-RPC 2.0 error object
+  shape: '{jsonrpc: "2.0", id: <request id>, error: {code: <int>, message: <string>, data: {code: <slug>, content: <string>, continue_url: <url>}}}'
+  problem_json: false
+  detail: Not RFC 9457. The transport status and the JSON-RPC code carry different information and an agent must read both.
+problem_types:
+- id: ucp_invalid_profile_url
+  jsonrpc_code: -32001
+  http_status: 422
+  message: UCP discovery failed
+  data_code: invalid_profile_url
+  detail: 'Unable to fetch agent profile: Missing profile uri'
+  cause: The caller invoked tools/call, prompts/list or resources/list without params.meta["ucp-agent"].profile.
+  remediation: Supply a resolvable UCP agent profile URI in meta["ucp-agent"].profile on every non-discovery method.
+  observed_at: '2026-09-02'
+  observed_on:
+  - tools/call search_catalog
+  - prompts/list
+  - resources/list
+- id: wp_rest_forbidden
+  http_status: 401
+  message: Sorry, you are not allowed to do that.
+  data_code: rest_forbidden
+  envelope: '{code, message, data:{status}}'
+  surface: https://www.aeo-inc.com/wp-json/wp-abilities/v1/abilities
+  cause: Anonymous request to an authenticated WordPress REST route on the corporate site.
+  remediation: Not remediable by a third party — the corporate WordPress REST API is a CMS platform surface, not a published AEO API. Read routes under wp/v2 are the anonymous portion.
+  observed_at: '2026-09-02'
+not_found:
+  detail: >-
+    No decline codes (AEO is not a card acquirer; payment is handled by Shopify's payment
+    handlers), no numeric error registry, and no problem-type registry document.

@@ -1,0 +1,19 @@
+generated: '2026-09-02'
+method: generated
+source: mcp/american-eagle-outfitters-unsubscribed-mcp-tools.json + https://www.unsubscribed.com/agents.md
+note: >-
+  One packaged Agent Skill. It is grounded entirely in the 13 MCP tool names and schemas
+  fetched live from https://www.unsubscribed.com/api/ucp/mcp on 2026-09-02 and in the
+  provider's own published agents.md and robots.txt rules; no operation, field or policy in
+  it was invented. American Eagle Outfitters publishes no OpenAPI, so no REST-grounded skill
+  is possible and none was written.
+skills:
+- name: shop-unsubscribed
+  file: american-eagle-outfitters-shop-unsubscribed.md
+  api: Unsubscribed Commerce (UCP/MCP)
+  endpoint: https://www.unsubscribed.com/api/ucp/mcp
+  operations: 13
+  summary: >-
+    Search, cart, check out and track orders on AEO's Unsubscribed storefront over UCP/MCP,
+    with the money-minor-units convention, the human-approval invariant on payment, and the
+    fact that completed orders have no API-level reversal.

@@ -24,7 +24,12 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-eagle-outfitters.png
 name: American Eagle Outfitters
 url: https://raw.githubusercontent.com/api-evangelist/american-eagle-outfitters/refs/heads/main/apis.yml
-modified: '2026-04-19'
+modified: '2026-09-02'
+created: '2026-04-19'
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com
 specificationVersion: '0.23'
 description: >-
   American Eagle Outfitters (AEO) is a global specialty retailer operating
@@ -39,16 +44,85 @@ tags:
   - Apparel
   - Consumer Goods
   - Fortune 1000
-apis: []
+apis:
+  - aid: american-eagle-outfitters:unsubscribed-commerce
+    name: Unsubscribed Commerce (UCP/MCP)
+    description: >-
+      The one callable, machine-reachable surface in the American Eagle Outfitters estate:
+      a Universal Commerce Protocol shopping server, transported over MCP, on the
+      Unsubscribed brand storefront. Anonymous discovery returns 13 tools with full JSON
+      Schema inputs covering catalog search, product lookup, cart, checkout and order
+      retrieval. It is a Shopify platform capability served from an AEO-controlled
+      hostname rather than an API AEO authored, and it is recorded that way — but it is
+      what an agent actually reaches when it shops an AEO brand.
+    humanURL: https://www.unsubscribed.com/agents.md
+    baseURL: https://www.unsubscribed.com/api/ucp/mcp
+    tags:
+      - Agentic Commerce
+      - MCP
+      - Universal Commerce Protocol
+      - E-Commerce
+      - Retail
+    properties:
+      - type: MCPServer
+        url: mcp/american-eagle-outfitters-mcp.yml
+      - type: Authentication
+        url: authentication/american-eagle-outfitters-authentication.yml
+      - type: OAuthScopes
+        url: scopes/american-eagle-outfitters-scopes.yml
+      - type: ErrorCatalog
+        url: errors/american-eagle-outfitters-problem-types.yml
+      - type: Conventions
+        url: conventions/american-eagle-outfitters-conventions.yml
+      - type: RateLimits
+        url: rate-limits/american-eagle-outfitters-rate-limits.yml
+      - type: Lifecycle
+        url: lifecycle/american-eagle-outfitters-lifecycle.yml
+      - type: AgentSkill
+        url: skills/_index.yml
+      - type: Documentation
+        url: https://www.unsubscribed.com/agents.md
 common:
   - type: DomainSecurity
     url: security/american-eagle-outfitters-domain-security.yml
+  - type: LLMsTxt
+    url: llms/american-eagle-outfitters-llms.txt
+  - type: WellKnown
+    url: well-known/american-eagle-outfitters-well-known.yml
+  - type: MCPServer
+    url: mcp/american-eagle-outfitters-mcp.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: Authentication
+    url: authentication/american-eagle-outfitters-authentication.yml
+  - type: OAuthScopes
+    url: scopes/american-eagle-outfitters-scopes.yml
+  - type: Conformance
+    url: conformance/american-eagle-outfitters-conformance.yml
+  - type: Conventions
+    url: conventions/american-eagle-outfitters-conventions.yml
+  - type: ErrorCatalog
+    url: errors/american-eagle-outfitters-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/american-eagle-outfitters-lifecycle.yml
+  - type: RateLimits
+    url: rate-limits/american-eagle-outfitters-rate-limits.yml
+  - type: Plans
+    url: plans/american-eagle-outfitters-plans-pricing.yml
+  - type: Packages
+    url: packages/american-eagle-outfitters-packages.yml
+  - type: Blog
+    url: https://www.aeo-inc.com/news-media/
+  - type: Support
+    url: https://www.ae.com/us/en/content/help/contact-us
+  - type: TermsOfService
+    url: https://www.ae.com/us/en/content/help/terms-and-conditions
+  - type: PrivacyPolicy
+    url: https://www.ae.com/content/help/privacy-notice/
   - type: LinkedIn
     url: https://www.linkedin.com/company/american-eagle-outfitters
   - type: Website
     url: https://www.ae.com
-  - type: Portal
-    url: https://www.americaneagle.com
   - type: GitHubOrganization
     url: https://github.com/aeo
   - type: Features
@@ -99,3 +173,8 @@ common:
         description: SAP enterprise systems for procurement, sourcing, and financial management.
       - name: AWS
         description: Amazon Web Services cloud infrastructure supporting e-commerce and data workloads.
+x-enrichment:
+  date: '2026-09-02'
+  status: enriched
+  artifacts_added: 21
+  pass: local-v1

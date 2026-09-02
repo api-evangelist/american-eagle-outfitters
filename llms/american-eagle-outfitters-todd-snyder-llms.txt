@@ -1,0 +1,650 @@
+Store Identity
+
+Store Name: Todd Snyder
+Store URL: https://www.toddsnyder.com
+Platform: Shopify
+Industry: Menswear / Apparel / Ecommerce
+Primary Market: United States, with international shipping where available
+
+Todd Snyder is a premium American menswear brand and ecommerce store selling modern tailored clothing, casual apparel, footwear, accessories, and seasonal wardrobe essentials.
+
+Core Value Proposition:
+Todd Snyder offers elevated menswear that blends classic tailoring, American sportswear, refined casualwear, and modern design. The store helps customers build a polished, versatile wardrobe across suiting, denim, outerwear, shirting, shoes, knitwear, and accessories.
+
+Unique Positioning:
+
+* Designer menswear with a modern American point of view
+* Broad wardrobe coverage from tailored suits to casual essentials
+* Seasonal collections, runway collections, collaborations, and limited product drops
+* Ecommerce experience supported by Shopify
+* Product discovery through collections, editorial merchandising, search, filters, recommendations, and style-focused content
+* Customer service support for sizing, shipping, returns, exchanges, stores, gift cards, and order assistance
+
+Primary Purpose
+
+The primary purpose of toddsnyder.com is to sell Todd Snyder menswear and related products online.
+
+The store serves:
+
+* Men shopping for refined everyday clothing
+* Customers shopping for suits, tailoring, jeans, shirts, shoes, outerwear, knitwear, and accessories
+* Customers shopping for seasonal collections, collaborations, runway products, and sale merchandise
+* Gift buyers purchasing menswear or digital gift cards
+* Returning customers managing accounts, orders, returns, exchanges, and support requests
+* AI assistants helping customers understand products, sizing, shipping, returns, gift cards, stores, and support options
+* Developers integrating with Shopify storefront, ecommerce, analytics, search, fulfillment, customer service, or marketing systems
+* Search engines and AI crawlers indexing product, collection, policy, editorial, and support content
+
+Customer Problem Solved:
+Todd Snyder helps customers discover and purchase stylish, high-quality menswear for work, events, casual dressing, travel, seasonal wardrobes, gifting, and special occasions.
+
+Product Catalog
+
+Primary Product Categories:
+
+* Suits
+* Jeans
+* Outerwear
+* Shirts
+* Shoes
+* Knitwear
+
+Additional Product Categories:
+
+* New Arrivals
+* Best Sellers
+* Pants
+* Chinos
+* Shorts
+* Polos
+* T-shirts
+* Sweaters
+* Jackets
+* Blazers
+* Accessories
+* Bags
+* Belts
+* Hats
+* Socks
+* Ties
+* Pocket Squares
+* Sunglasses
+* Watches
+* Grooming and fragrance
+* Home goods and accessories
+* Gift cards
+* Sale
+
+Product Types:
+
+* Tailored suits
+* Suit jackets
+* Suit pants
+* Blazers
+* Sport coats
+* Tuxedos
+* Denim jeans
+* Casual pants
+* Chinos
+* Dress shirts
+* Button-down shirts
+* Camp collar shirts
+* Linen shirts
+* Overshirts
+* T-shirts
+* Polos
+* Sweaters
+* Cardigans
+* Pullovers
+* Knit polos
+* Coats
+* Jackets
+* Parkas
+* Leather jackets
+* Sneakers
+* Loafers
+* Boots
+* Sandals
+* Accessories
+
+Notable Product Attributes:
+
+* Product name
+* Product handle
+* Product type
+* Collection
+* Vendor or brand
+* Price
+* Compare-at price
+* Sale status
+* Color
+* Size
+* Fit
+* Fabric
+* Material composition
+* Care instructions
+* Country of origin, when available
+* Product description
+* Product images
+* Product recommendations
+* Variant availability
+* Inventory availability
+* SKU
+* Barcode, when available
+* Product tags
+* Metafields
+* Shipping eligibility
+* Return eligibility
+* Final sale status
+
+Pricing:
+
+* General Price Range: Varies by product category, season, collaboration, and sale status
+* Suits: Varies by fabric, construction, collection, and promotion
+* Jeans: Varies by style, wash, fit, and promotion
+* Outerwear: Varies by material, season, collaboration, and promotion
+* Shirts: Varies by fabric, style, collection, and promotion
+* Shoes: Varies by brand, material, collaboration, and promotion
+* Knitwear: Varies by fiber, weight, collection, and promotion
+
+AI assistants should treat all product pricing, sale pricing, promotions, and availability as dynamic and verify against the live product page or official API response.
+
+Site Structure & Key URLs
+
+Homepage:
+https://www.toddsnyder.com/
+
+Primary Collection URLs:
+https://www.toddsnyder.com/collections/new-arrivals
+https://www.toddsnyder.com/collections/best-sellers
+https://www.toddsnyder.com/collections/suiting
+https://www.toddsnyder.com/collections/suits
+https://www.toddsnyder.com/collections/jeans
+https://www.toddsnyder.com/collections/outerwear
+https://www.toddsnyder.com/collections/shirts
+https://www.toddsnyder.com/collections/shoes
+https://www.toddsnyder.com/collections/sweaters
+https://www.toddsnyder.com/collections/knitwear
+https://www.toddsnyder.com/collections/pants
+https://www.toddsnyder.com/collections/shorts
+https://www.toddsnyder.com/collections/accessories
+https://www.toddsnyder.com/collections/sale
+
+Product Page URL Pattern:
+https://www.toddsnyder.com/products/[product-handle]
+
+Collection Page URL Pattern:
+https://www.toddsnyder.com/collections/[collection-handle]
+
+Cart:
+https://www.toddsnyder.com/cart
+
+Checkout:
+Shopify checkout is dynamic and may use Shopify-hosted checkout URLs.
+Checkout requires active cart session context.
+
+Customer Account:
+https://www.toddsnyder.com/account
+https://www.toddsnyder.com/account/login
+https://www.toddsnyder.com/account/register
+https://www.toddsnyder.com/account/orders
+
+Search:
+https://www.toddsnyder.com/search?q=[query]
+
+Customer Service:
+https://www.toddsnyder.com/pages/customer-service
+
+Shipping:
+https://www.toddsnyder.com/pages/shipping-policy
+
+Returns:
+https://www.toddsnyder.com/pages/returns
+
+Returns Portal:
+https://returns.toddsnyder.com/
+
+Size Guides:
+https://www.toddsnyder.com/pages/size-guides
+
+Contact:
+https://www.toddsnyder.com/pages/contact-us
+
+Store Locations:
+https://www.toddsnyder.com/pages/stores
+
+Gift Cards:
+https://www.toddsnyder.com/products/gift-card
+
+About:
+https://www.toddsnyder.com/pages/about
+
+Editorial / Brand Content:
+https://www.toddsnyder.com/blogs/news
+
+Policies and Terms:
+https://www.toddsnyder.com/policies/privacy-policy
+https://www.toddsnyder.com/policies/terms-of-service
+https://www.toddsnyder.com/pages/accessibility-statement
+https://www.toddsnyder.com/pages/notice-at-collection
+https://www.toddsnyder.com/pages/data-request
+
+Sitemap:
+https://www.toddsnyder.com/sitemap.xml
+
+Robots:
+https://www.toddsnyder.com/robots.txt
+
+LLM File:
+https://www.toddsnyder.com/LLM.txt
+
+Customer-Facing Information
+
+Shipping:
+Todd Snyder offers shipping options displayed at checkout.
+
+Domestic Shipping:
+
+* Free standard shipping is available on orders over $200 within the Continental United States.
+* Standard shipping for orders under $200 is $9.
+* Expedited shipping is available for a flat fee where eligible.
+* Rush shipping is available for a flat fee where eligible.
+* Orders placed after 12 PM EST may be processed on the following business day.
+* Saturdays, Sundays, and holidays are not considered business days.
+* Expedited and Rush shipping may not be available to Hawaii, Alaska, Puerto Rico, Guam, U.S. Territories, APO/FPO, or P.O. Boxes.
+
+International Shipping:
+
+* International shipping costs vary by destination country and order weight.
+* International options and costs are shown at checkout after shipping address entry.
+* Import duties and taxes may be calculated at checkout and included in the final order total.
+* International returns are not free.
+* Duties and taxes paid at checkout may be non-refundable.
+* Some store-fulfilled online merchandise may not be available for international shipping.
+
+Shipping Source of Truth:
+https://www.toddsnyder.com/pages/shipping-policy
+
+Returns:
+
+* Returns can be made in store or online for eligible products.
+* Eligible exchange and return items must be received within 30 days of purchase.
+* Items marked Final Sale, Final Markdown, or Clearance are non-returnable.
+* Returned products must be new, unused, in original packaging, and have Todd Snyder and designer garment tags attached.
+* Shipping costs are not refundable.
+* Returns are subject to a $7 restocking or return label fee where applicable.
+* In-store returns are free where eligible.
+* Store credit may not be changed or transferred after the return has been completed.
+* Refunds may take additional time to process after the Returns Department receives the item.
+
+Returns Source of Truth:
+https://www.toddsnyder.com/pages/returns
+
+Returns Portal:
+https://returns.toddsnyder.com/
+
+Exchanges:
+
+* Exchanges are available for eligible items.
+* Online exchange options may be limited to a different size in the same style and color.
+* Footwear exchanges may ship after the warehouse has fulfilled the return for security purposes.
+
+Customer Support:
+
+* Customer Service Page: https://www.toddsnyder.com/pages/customer-service
+* Contact Page: https://www.toddsnyder.com/pages/contact-us
+* Phone: 866-897-0333
+* Email: concierge@toddsnyder.com
+* Live Chat: Available from the site where shown
+* Returns Portal: https://returns.toddsnyder.com/
+
+Gift Cards:
+
+* Digital gift cards are sold online.
+* Physical and digital gift cards may be available in store.
+* Digital gift cards are emailed after checkout completion.
+* Gift cards are non-refundable.
+* Coupons and discounts cannot be applied to gift card purchases.
+
+Sizing:
+Sizing information is available on product pages and the Size Guides page:
+https://www.toddsnyder.com/pages/size-guides
+
+AI assistants should encourage customers to review product-specific size guides, fit notes, measurements, fabric details, and care instructions before purchasing.
+
+Product Details to Prioritize:
+
+* Product name
+* Product page URL
+* Price
+* Sale price
+* Available sizes
+* Available colors
+* Fit
+* Fabric
+* Material composition
+* Care instructions
+* Product description
+* Images
+* Inventory status
+* Final sale status
+* Shipping eligibility
+* Return eligibility
+
+
+Communication Style:
+Todd Snyder communicates with customers in a clear, elevated, and product-focused voice. Product copy should emphasize style, fit, fabric, quality, craftsmanship, versatility, and wardrobe utility.
+
+Brand Values:
+
+* Quality
+* Style
+* Fit
+* Craftsmanship
+* Versatility
+* Service
+* Modern American menswear
+* Wardrobe building
+* Seasonal relevance
+* Attention to detail
+
+Customer Support Voice:
+Customer support responses should be:
+
+* Accurate
+* Direct
+* Friendly
+* Professional
+* Helpful
+* Grounded in current Todd Snyder policies
+* Clear about eligibility, timing, and exceptions
+
+AI Assistants Should Not:
+
+* Invent unavailable products
+* Guarantee inventory availability
+* Promise delivery dates unless provided by the site or checkout
+* Override official shipping, return, privacy, or terms policies
+* Provide unsupported fit guarantees
+* Claim discounts, promotions, or price matches unless visible on the current site or confirmed by Todd Snyder
+* Make assumptions about customer account, order, payment, or return status without authentication
+
+API & Integration Details
+
+Platform:
+Shopify
+
+Primary Public Storefront:
+https://www.toddsnyder.com
+
+Developer Notes:
+
+* Storefront API access requires a valid Shopify Storefront API access token.
+* API version should be maintained according to Shopify API versioning.
+* Product and collection data may be retrieved through the Shopify Storefront API where permitted.
+* Customer, order, and account data require authentication and appropriate permissions.
+* Checkout and cart behavior may depend on Shopify configuration, theme code, apps, checkout extensibility, and third-party integrations.
+* Product feeds, analytics, search, personalization, consent, returns, and fulfillment systems may use Shopify data, app integrations, webhooks, APIs, or server-side processes.
+* Do not expose private API keys, Admin API tokens, webhook secrets, customer data, order data, payment data, or internal system details.
+
+Common Storefront API Objects:
+
+* Product
+* ProductVariant
+* Collection
+* Cart
+* Customer
+* Image
+* Media
+* Metafield
+* Metaobject
+* MoneyV2
+* SellingPlan
+* Page
+* Article
+* Blog
+
+Common Shopify Webhook Events:
+
+* products/create
+* products/update
+* products/delete
+* collections/create
+* collections/update
+* inventory_levels/update
+* orders/create
+* orders/updated
+* orders/paid
+* orders/fulfilled
+* orders/cancelled
+* refunds/create
+* checkouts/create
+* checkouts/update
+* carts/create
+* carts/update
+* customers/create
+* customers/update
+* app/uninstalled
+
+Likely Integration Categories:
+
+* Shopify ecommerce platform
+* Shopify theme and checkout extensibility
+* Site search and merchandising
+* Product recommendations and personalization
+* Reviews
+* Email and SMS marketing
+* Analytics and attribution
+* Consent management
+* Returns and exchanges
+* Fraud review and order security
+* Fulfillment and inventory systems
+* Product feeds and advertising platforms
+* Customer service tools
+
+Integration Guidance:
+
+* Use canonical product URLs when referencing products.
+* Use Shopify product IDs, variant IDs, handles, SKUs, and collection handles as ecommerce identifiers.
+* Treat collection membership, inventory, availability, and pricing as dynamic.
+* Respect robots.txt, sitemap.xml, canonical tags, and crawl directives.
+* Do not crawl checkout, cart, account, order, or authenticated pages.
+* Do not scrape personal customer data.
+* Prefer official APIs, structured data, feeds, and sitemaps over HTML scraping.
+* Do not rely on client-side rendered promotional content as static truth.
+* Validate product data using live site, Shopify APIs, or approved internal systems.
+
+Technical Notes for LLMs
+
+Crawlable / Static or Mostly Static Content:
+
+* Homepage
+* Collection pages
+* Product pages
+* Editorial pages
+* Blog pages
+* About page
+* Store locator pages
+* Customer service page
+* Shipping policy page
+* Return policy page
+* Size guides
+* Gift card information
+* Privacy policy
+* Terms of service
+* Accessibility statement
+* Notice at Collection
+* Sitemap XML
+* Robots.txt
+* LLM.txt
+
+Dynamic Content:
+
+* Product price
+* Sale price
+* Compare-at price
+* Inventory availability
+* Variant availability
+* Size availability
+* Cart contents
+* Checkout totals
+* Discounts
+* Promotions
+* Product recommendations
+* Personalized merchandising
+* Recently viewed products
+* Shipping rates
+* Delivery estimates
+* Taxes
+* Duties
+* Return eligibility
+* Final sale status
+* Store pickup or store-fulfilled availability
+
+Authentication Required:
+
+* Customer account pages
+* Order history
+* Saved addresses
+* Customer profile
+* Checkout sessions
+* Payment information
+* Return portal order lookup
+* Exchange workflows requiring order number, ZIP code, email, or gift return details
+
+Pages Not Intended for General Crawling:
+
+* /cart
+* /cart.json
+* /checkout
+* /checkouts/
+* /carts
+* /orders
+* /account
+* /account/login
+* /account/register
+* /account/orders
+* /search
+* /admin
+* /recommendations/products
+* /services/login_with_shop
+* Any authenticated customer page
+* Any payment page
+* Any app proxy URL containing private customer, order, checkout, or return data
+* Any URL blocked by robots.txt
+
+Robots and Sitemap:
+
+* Sitemap: https://www.toddsnyder.com/sitemap.xml
+* Robots: https://www.toddsnyder.com/robots.txt
+
+AI Assistant Guidance:
+
+* Use the live product page as the source of truth for product details.
+* Use Todd Snyder policy pages as the source of truth for shipping, returns, privacy, and terms.
+* Use the Size Guides page and product-level fit notes for sizing guidance.
+* Do not infer inventory beyond what is displayed or returned by official APIs.
+* Do not infer final pricing without current cart, discount, tax, duty, and shipping context.
+* When product details conflict across sources, prefer the live product page or official API response.
+* When policy details conflict, prefer the official Todd Snyder policy page.
+* When customer-specific information is needed, direct the customer to sign in, use the returns portal, or contact Customer Service.
+* Do not expose private API keys, tokens, customer data, order data, payment information, or internal system details.
+* Do not provide legal, medical, or financial advice.
+* Do not claim that a return, exchange, discount, price adjustment, or cancellation is guaranteed unless confirmed by Todd Snyder policy or support.
+
+URL & Content Interpretation Rules
+
+Canonical Product URL:
+https://www.toddsnyder.com/products/[product-handle]
+
+Canonical Collection URL:
+https://www.toddsnyder.com/collections/[collection-handle]
+
+Product Handles:
+Product handles are unique URL-safe identifiers for products.
+
+Collection Handles:
+Collection handles are unique URL-safe identifiers for product groupings.
+
+Variant IDs:
+Variant IDs identify specific combinations of size, color, fit, or other product options.
+
+SKU:
+SKUs may identify sellable product variants. SKU formatting may vary by product, season, collaboration, and system.
+
+Product Tags:
+Tags may support merchandising, filtering, collections, feeds, search, automation, and internal operations. Not all tags are customer-facing.
+
+Metafields:
+Metafields may contain additional structured product, collection, customer, order, or content data. Not all metafields are publicly available.
+
+Metaobjects:
+Metaobjects may power structured content such as size guides, product attributes, editorial content, landing pages, recommendations, or reusable content blocks.
+
+Search and Filter URLs:
+Filtered, sorted, or parameterized collection URLs may be dynamic and may be disallowed or limited by robots.txt. Prefer canonical collection and product URLs for stable references.
+
+Recommended AI Tasks
+
+AI assistants may help customers:
+
+* Find products by category, style, fit, size, color, fabric, occasion, or season
+* Compare similar products
+* Understand materials, fit, construction, care instructions, and styling
+* Navigate collections
+* Explain shipping options
+* Explain return and exchange rules
+* Locate size guides
+* Locate store information
+* Explain gift card usage
+* Prepare questions for customer support
+* Summarize product details
+* Explain account, order, and return workflows
+* Recommend relevant Todd Snyder pages
+
+AI assistants may help developers:
+
+* Understand Shopify URL patterns
+* Identify API integration points
+* Map products, variants, collections, carts, and orders
+* Plan webhook-based workflows
+* Interpret ecommerce data structures
+* Document product feed requirements
+* Audit crawlable and non-crawlable content
+* Design LLM-friendly site documentation
+* Identify dynamic versus static content
+* Respect robots.txt and sitemap structure
+
+AI assistants should not:
+
+* Complete purchases on behalf of customers without explicit customer action
+* Access authenticated account information without permission and authentication
+* Make unsupported claims about delivery, returns, exchanges, price adjustments, or promotions
+* Present unavailable products as available
+* Provide confidential technical information
+* Guess private customer or order details
+* Scrape blocked URLs or private customer workflows
+* Circumvent Shopify, Todd Snyder, or third-party access controls
+
+Data Freshness
+
+Product Data Freshness:
+Product pricing, sale status, inventory, variant availability, promotions, and recommendations should be treated as real-time or near-real-time data.
+
+Policy Data Freshness:
+Shipping, returns, privacy, terms, gift card, and customer service information should be checked against the current Todd Snyder site before answering customer-specific questions.
+
+Catalog Freshness:
+Collections and product assortments may change frequently based on seasonality, runway collections, collaborations, new arrivals, markdowns, inventory, and merchandising strategy.
+
+Checkout Freshness:
+Checkout totals, shipping methods, taxes, duties, discounts, and delivery estimates require live cart and checkout context.
+
+Last Updated:
+2026-05-20
+
+Maintained By:
+Todd Snyder Ecommerce / Digital Product Team
+
+Contact for LLM.txt Issues:
+concierge@toddsnyder.com

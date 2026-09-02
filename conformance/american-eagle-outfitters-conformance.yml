@@ -1,0 +1,121 @@
+generated: '2026-09-02'
+method: probed
+source: live probes of www.ae.com, www.aeo-inc.com and www.unsubscribed.com, 2026-09-02
+note: >-
+  American Eagle Outfitters makes no published API-standards claim of its own. Every
+  conformance recorded below was observed in a document actually served from an
+  AEO-controlled host, and every one of them is implemented by a platform vendor
+  (Shopify on the Unsubscribed storefront) rather than by AEO. Nothing is asserted from a
+  marketing page.
+standards:
+- id: ucp
+  name: Universal Commerce Protocol
+  conforms: true
+  version: '2026-08-25'
+  operator: platform
+  evidence:
+    url: https://www.unsubscribed.com/.well-known/ucp.json
+    status: 200
+    file: well-known/american-eagle-outfitters-unsubscribed-ucp-json.json
+    detail: >-
+      Declares ucp.version 2026-08-25, two further supported versions (2026-04-08,
+      2026-01-23), the dev.ucp.shopping service over MCP transport, and the checkout,
+      cart, fulfillment, discount, order, catalog.search and catalog.lookup capabilities.
+      The declared service endpoint is https://unsubscribed-com.myshopify.com/api/ucp/mcp
+      — a Shopify domain, not an AEO one — so operator attribution is `platform`.
+- id: mcp
+  name: Model Context Protocol
+  conforms: true
+  version: '2024-11-05'
+  operator: platform
+  evidence:
+    url: https://www.unsubscribed.com/api/ucp/mcp
+    status: 200
+    detail: >-
+      initialize returned protocolVersion 2024-11-05 and serverInfo
+      {name: universal-commerce, version: 0.1.0}; tools/list returned 13 tools with full
+      JSON Schema inputSchema, anonymously.
+- id: oidc
+  name: OpenID Connect Discovery 1.0
+  conforms: true
+  operator: platform
+  evidence:
+    url: https://www.unsubscribed.com/.well-known/openid-configuration
+    status: 200
+    detail: Complete discovery document with issuer, authorization_endpoint, token_endpoint, jwks_uri, RS256 id_token signing and four scopes.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: true
+  operator: platform
+  evidence:
+    url: https://www.unsubscribed.com/.well-known/oauth-protected-resource
+    status: 200
+    detail: RFC 9728 protected-resource metadata naming two authorization servers and bearer_methods_supported [header].
+- id: rfc9728
+  name: RFC 9728 OAuth 2.0 Protected Resource Metadata
+  conforms: true
+  operator: platform
+  evidence:
+    url: https://www.unsubscribed.com/.well-known/oauth-protected-resource
+    status: 200
+- id: llmstxt
+  name: llms.txt
+  conforms: true
+  operator: self
+  evidence:
+    url: https://www.ae.com/llms.txt
+    status: 200
+    detail: >-
+      AEO-authored. A well-formed llms.txt for "American Eagle & Aerie" with an H1, a
+      blockquote summary, five topical H2 sections and an Optional section — 43 curated
+      links across six locale storefronts. This is the one agent-facing document in the
+      estate that AEO wrote itself.
+- id: jsonrpc2
+  name: JSON-RPC 2.0
+  conforms: true
+  operator: platform
+  evidence:
+    url: https://www.unsubscribed.com/api/ucp/mcp
+    status: 200
+    detail: Responses carry jsonrpc "2.0", matching id, and error objects with numeric code plus structured data (observed -32001).
+- id: rfc9457
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence:
+    detail: No application/problem+json anywhere. The MCP surface uses JSON-RPC error objects; the WordPress REST surface uses the WP {code,message,data.status} envelope.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence:
+    url: https://www.ae.com/.well-known/security.txt
+    status: 404
+    detail: Also 404 on www.aeo-inc.com, www.unsubscribed.com and www.toddsnyder.com.
+- id: rfc9727
+  name: RFC 9727 api-catalog
+  conforms: false
+  evidence:
+    url: https://www.ae.com/.well-known/api-catalog
+    status: 404
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence:
+    url: https://www.ae.com/.well-known/agent-card.json
+    status: 404
+    detail: Both agent-card.json and the legacy agent.json 404 on every reachable AEO host.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence:
+    detail: No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, Protobuf or WSDL found on any AEO host after the full STEP 0b discovery sweep.
+domain_standards:
+- market: retail / e-commerce
+  standard: Universal Commerce Protocol (UCP) 2026-08-25
+  declared: true
+  operator: platform
+  spec_location: /.well-known/ucp.json -> ucp.services["dev.ucp.shopping"][0]
+  note: >-
+    UCP is the agentic-commerce standard for this market and AEO's Unsubscribed storefront
+    declares it with a version and a live service. The declaration is Shopify's
+    implementation running under AEO's hostname, so it is recorded at platform attribution,
+    not self.

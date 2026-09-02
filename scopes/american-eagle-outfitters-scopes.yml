@@ -1,0 +1,26 @@
+generated: '2026-09-02'
+method: probed
+source: https://www.unsubscribed.com/.well-known/openid-configuration
+docs: https://www.unsubscribed.com/agents.md
+note: >-
+  These are the OpenID Connect scopes Shopify advertises for customer accounts on the AEO
+  brand storefront www.unsubscribed.com. American Eagle Outfitters publishes no OAuth scope
+  reference of its own — there is no developer programme on www.ae.com to have one. The
+  scopes are read verbatim from scopes_supported in the live discovery document; no
+  descriptions are published by the provider, so the descriptions below are stated as
+  derived readings of the scope names and are marked as such.
+authorization_server: https://shopify.com/authentication/55041261720
+scope_count: 4
+scopes:
+- name: openid
+  description: Standard OpenID Connect scope; requests an ID token identifying the shopper.
+  description_method: derived
+- name: email
+  description: Standard OpenID Connect scope; releases the shopper's email address claim.
+  description_method: derived
+- name: customer-account-api:full
+  description: Full access to the Shopify Customer Account API for the signed-in shopper (orders, addresses, profile).
+  description_method: derived
+- name: customer-account-mcp-api:full
+  description: Full access to the Shopify Customer Account MCP API for the signed-in shopper — the authenticated counterpart to the anonymous UCP shopping endpoint.
+  description_method: derived
