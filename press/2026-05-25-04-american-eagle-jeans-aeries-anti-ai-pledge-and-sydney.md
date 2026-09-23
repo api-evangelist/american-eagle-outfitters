@@ -1,7 +1,9 @@
 ---
 title: American Eagle jeans, Aerie's anti-AI pledge, and Sydney ...
 url: https://www.facebook.com/businessinsider/posts/american-eagle-jeans-aeries-anti-ai-pledge-and-sydney-sweeney-boosted-revenue-st/1222224646442484/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Eagle Outfitters" press release artificial intelligence'
 position: 4
 source: serpapi-google
