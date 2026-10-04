@@ -82,6 +82,9 @@ apis:
         url: skills/_index.yml
       - type: Documentation
         url: https://www.unsubscribed.com/agents.md
+    x-surface: platform-generated
+    x-platform: shopify
+    x-platform-surface: ucp
 common:
   - type: DomainSecurity
     url: security/american-eagle-outfitters-domain-security.yml
