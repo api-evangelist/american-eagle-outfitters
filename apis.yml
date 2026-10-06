@@ -24,7 +24,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-eagle-outfitters.png
 name: American Eagle Outfitters
 url: https://raw.githubusercontent.com/api-evangelist/american-eagle-outfitters/refs/heads/main/apis.yml
-modified: '2026-09-02'
+modified: '2026-10-06'
 created: '2026-04-19'
 maintainers:
   - FN: API Evangelist
@@ -86,6 +86,8 @@ apis:
     x-platform: shopify
     x-platform-surface: ucp
 common:
+  - url: https://blog.ae.com/feed/
+    type: BlogRSS
   - type: DomainSecurity
     url: security/american-eagle-outfitters-domain-security.yml
   - type: LLMsTxt
