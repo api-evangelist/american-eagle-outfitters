@@ -1,0 +1,21 @@
+{
+  "repo": "american-eagle-outfitters",
+  "feeds": [
+    {
+      "source": "https://blog.ae.com/feed/",
+      "feed_url": "https://blog.ae.com/feed/",
+      "title": "",
+      "saved": 4,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.aeo-inc.com/news-media/",
+      "feed_url": "https://www.aeo-inc.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 4,
+  "fetched": "2026-10-10T13:15:00Z"
+}
