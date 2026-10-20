@@ -2,32 +2,27 @@ generated: '2026-09-02'
 method: probed
 source: https://www.unsubscribed.com/api/ucp/mcp
 name: Unsubscribed Commerce (UCP/MCP)
-description: >-
-  American Eagle Outfitters exposes one live, anonymously reachable MCP endpoint across its
-  estate: the Universal Commerce Protocol (UCP) shopping server on www.unsubscribed.com, the
-  AEO brand storefront running on Shopify. It answers `initialize` and `tools/list` without
-  credentials and returns 13 real tools with full JSON Schema inputs covering catalog search,
-  cart, checkout and order lookup. It is a Shopify platform capability served from an
-  AEO-controlled hostname, not a server AEO wrote — but it is the surface an agent actually
-  reaches when it shops an AEO brand, so it is recorded as present.
+description: 'American Eagle Outfitters exposes one live, anonymously reachable MCP endpoint across its
+  estate: the Universal Commerce Protocol (UCP) shopping server on www.unsubscribed.com, the AEO brand
+  storefront running on Shopify. It answers `initialize` and `tools/list` without credentials and returns
+  13 real tools with full JSON Schema inputs covering catalog search, cart, checkout and order lookup.
+  It is a Shopify platform capability served from an AEO-controlled hostname, not a server AEO wrote —
+  but it is the surface an agent actually reaches when it shops an AEO brand, so it is recorded as present.'
 ownership:
   host_controlled_by: American Eagle Outfitters, Inc.
-  evidence: >-
-    unsubscribed.com terms of service carry "© 2021 AEO MANAGEMENT CO. ALL RIGHTS RESERVED"
-    and name "American Eagle Outfitters, Inc., 77 Hot Metal Street, Pittsburgh, Pennsylvania
-    15203, copyrightalert@ae.com" as the DMCA agent; www.aeo-inc.com lists Unsubscribed as
-    one of AEO's five brands and links to www.unsubscribed.com.
+  evidence: unsubscribed.com terms of service carry "© 2021 AEO MANAGEMENT CO. ALL RIGHTS RESERVED" and
+    name "American Eagle Outfitters, Inc., 77 Hot Metal Street, Pittsburgh, Pennsylvania 15203, copyrightalert@ae.com"
+    as the DMCA agent; www.aeo-inc.com lists Unsubscribed as one of AEO's five brands and links to www.unsubscribed.com.
   authored_by: Shopify (platform-provided UCP implementation)
 deployment:
   mode: remote
   endpoint: https://www.unsubscribed.com/api/ucp/mcp
   auth: none
   verified: probed
-  note: >-
-    Discovery (initialize, tools/list) is fully anonymous. tools/call, prompts/list and
-    resources/list are gated on a UCP agent profile — they return JSON-RPC error -32001
-    "UCP discovery failed" / invalid_profile_url until the caller supplies
-    meta["ucp-agent"].profile. There is no API key and no OAuth on the discovery path.
+  note: Discovery (initialize, tools/list) is fully anonymous. tools/call, prompts/list and resources/list
+    are gated on a UCP agent profile — they return JSON-RPC error -32001 "UCP discovery failed" / invalid_profile_url
+    until the caller supplies meta["ucp-agent"].profile. There is no API key and no OAuth on the discovery
+    path.
 server_info:
   name: universal-commerce
   version: 0.1.0
@@ -83,7 +78,8 @@ tools:
   description: Updates a checkout (shipping address, method).
 - name: complete_checkout
   category: checkout
-  description: Completes a checkout; returns order ID and Thank You Page URL. Requires explicit buyer approval.
+  description: Completes a checkout; returns order ID and Thank You Page URL. Requires explicit buyer
+    approval.
 - name: cancel_checkout
   category: checkout
   description: Cancels a checkout.
@@ -94,7 +90,49 @@ other_hosts_probed:
 - host: www.toddsnyder.com
   endpoint: https://www.toddsnyder.com/api/ucp/mcp
   status: 403
-  note: Cloudflare managed challenge; the store's /llms.txt was served but the MCP endpoint could not be reached. Presence unknown.
+  note: Cloudflare managed challenge; the store's /llms.txt was served but the MCP endpoint could not
+    be reached. Presence unknown.
 - host: www.ae.com
   status: 404
   note: /.well-known/ucp 404s; no MCP endpoint found on the flagship American Eagle / Aerie host.
+tool_quality:
+  tool_count: 13
+  tokens_total: 49354
+  tokens_per_tool_median: 2906
+  heavy_tools:
+  - name: complete_checkout
+    tokens: 7009
+  - name: create_checkout
+    tokens: 5572
+  - name: update_checkout
+    tokens: 5528
+  - name: get_checkout
+    tokens: 5285
+  - name: update_cart
+    tokens: 3784
+  heavy_tool_count: 13
+  params_total: 29
+  params_undescribed: 0
+  params_described_pct: 100.0
+  tools_with_undescribed_params: 0
+  tools_annotated: 0
+  annotated_pct: 0.0
+  state_changing_unhinted:
+  - create_checkout
+  - update_checkout
+  - cancel_checkout
+  - create_cart
+  - update_cart
+  - cancel_cart
+  tools_missing_schema: 0
+  short_descriptions: 0
+  duplicate_descriptions: 0
+  duplicate_names: 0
+  nonportable_names: []
+  output_schema_count: 13
+  token_estimate: chars/3.6 of each compact tool definition
+  source: mcp/american-eagle-outfitters-unsubscribed-mcp-tools.json
+  measured: '2026-10-20'
+  scored: false
+  note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
+    from Glimind's agent-readiness audit.
