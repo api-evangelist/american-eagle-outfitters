@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/american-eagle-outfitters/integrations
 - https://n8n.io/integrations/american-eagle-outfitters/
@@ -10,7 +10,35 @@ checked:
 - https://monid.ai/tools/american-eagle-outfitters
 - https://n8n.io/integrations/american-eagle-outfitters/
 - https://zapier.com/apps/american-eagle-outfitters/integrations
+- https://cascale.org/our-members/
+- https://services.oeko-tex.com/buying-guide/
+- https://www.centricsoftware.com/partners/
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Cascale (Sustainable Apparel Coalition)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cascale.org/our-members/
+  category: apparel sustainability coalition membership
+  contract_reference:
+    register: Cascale members (cascale.org/our-members/, formerly Sustainable Apparel Coalition)
+    standard: Higg Index (Cascale)
+    spec_file: null
+    role: cascale-member
+    registered_name: American Eagle
+    register_id: 1761
+    register_location: New York, New York, United States
+    partner_tier: Brands & Retailers
+    matched_domain: ae.com
+    matched_by: domain
+    signal_note: 'participation only: coalition membership; member type is context, never counted'
+    detected_by: sweep-fashion-apparel.py
+    detected: '2026-10-20'
+  detected_by: sweep-fashion-apparel.py
+  first_seen: '2026-10-20'
 templates: []
