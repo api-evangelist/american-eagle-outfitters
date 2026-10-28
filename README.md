@@ -66,33 +66,113 @@
 
 American Eagle Outfitters (AEO) is a global specialty retailer operating the American Eagle and Aerie brands, offering on-trend clothing, accessories, and personal care products at affordable prices. The company operates over 1,000 stores across the Americas and online, with a unified commerce strategy spanning e-commerce, mobile, and in-store experiences.
 
-## APIs
+**Areas:** Retail · E-Commerce · Fashion · Apparel · Consumer Goods · Fortune 1000
 
-No public developer APIs are currently documented for American Eagle Outfitters.
+## American Eagle Outfitters on APIs.io
 
-## Features
+Everything profiled for American Eagle Outfitters is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/american-eagle-outfitters/](https://apis.io/providers/american-eagle-outfitters/)** — or go straight to one of the APIs or properties below.
 
-- **Unified Commerce Platform** — Seamless integration of in-store, mobile, and online channels through a unified commerce strategy powered by Jumpmind Commerce POS.
-- **Loyalty Program** — Oracle CrowdTwist-powered loyalty program with points, rewards, and personalized offers across American Eagle and Aerie brands.
-- **Mobile Commerce** — Native iOS and Android apps for browsing, purchasing, order tracking, and loyalty rewards management.
-- **Data Fabric** — Google Cloud Dataplex-based data fabric enabling unified data governance, cataloging, and analytics across the enterprise.
-- **Personalization Engine** — AI-driven personalization for product recommendations, search results, and marketing communications.
-- **Omnichannel Fulfillment** — Buy online pick up in store (BOPIS), curbside pickup, same-day delivery, and ship-from-store capabilities.
-- **Real-Time Inventory** — Unified real-time inventory visibility across all store locations and distribution centers.
-- **Retail Analytics** — MicroStrategy-powered business intelligence and analytics for sales, inventory, and customer insights.
+### APIs (1)
 
-## Integrations
+- [Unsubscribed Commerce (UCP/MCP)](https://apis.io/apis/american-eagle-outfitters/unsubscribed-commerce/) — The one callable, machine-reachable surface in the American Eagle Outfitters estate: a Universal Commerce Protocol shopping server, transported over MCP, on…
 
-- **Jumpmind Commerce** — Point-of-sale platform powering in-store checkout across all AEO store locations.
-- **Oracle Retail** — Merchandise planning, inventory management, and store operations.
-- **Oracle CrowdTwist** — Loyalty and engagement platform powering the AEO Connected rewards program.
-- **Google Cloud Dataplex** — Data fabric platform for unified data governance and analytics.
-- **MicroStrategy** — Business intelligence and analytics for retail performance reporting.
-- **SAP** — Enterprise systems for procurement, sourcing, and financial management.
-- **AWS** — Cloud infrastructure supporting e-commerce and data workloads.
+### Published properties
 
-## Common Properties
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Unsubscribed Commerce (UCP/MCP)](https://apis.io/servers/american-eagle-outfitters/unsubscribed-commerce-ucp-mcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [American Eagle Outfitters Authentication](https://apis.io/security/american-eagle-outfitters/american-eagle-outfitters-authentication/)
+- [American Eagle Outfitters Domain Security](https://apis.io/security/american-eagle-outfitters/american-eagle-outfitters-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [American Eagle Outfitters Scopes](https://apis.io/scopes/american-eagle-outfitters/american-eagle-outfitters-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [American Eagle Outfitters Plans Pricing](https://apis.io/plans/american-eagle-outfitters/american-eagle-outfitters-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [American Eagle Outfitters Rate Limits](https://apis.io/rate-limits/american-eagle-outfitters/american-eagle-outfitters-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.ae.com)
-- [Portal](https://www.americaneagle.com)
-- [GitHub Organization](https://github.com/aeo)
+- [Support](https://www.ae.com/us/en/content/help/contact-us)
+- [Blog](https://www.aeo-inc.com/news-media/)
+- [Terms of service](https://www.ae.com/us/en/content/help/terms-and-conditions)
+- [Privacy policy](https://www.ae.com/content/help/privacy-notice/)
+- [GitHub](https://github.com/aeo)
+
+## API Evangelist rating
+
+**Kin Score 23.2** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 30.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 23.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/american-eagle-outfitters/](https://apis.io/providers/american-eagle-outfitters/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for American Eagle Outfitters: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/american-eagle-outfitters/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
